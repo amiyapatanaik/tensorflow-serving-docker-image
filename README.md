@@ -28,6 +28,7 @@ To check if the container is running
 $ docker ps
 ```
 Tensorflow Serving is now running on port 9000 and is serving a MNIST model that can classify handwritten digits. To know more about MNIST: https://en.wikipedia.org/wiki/MNIST_database
+
 **Serving your own models**
 The image has a models folder from which both the model configurations and actual models will be loaded. The folder structure is:
 ```
@@ -61,6 +62,7 @@ $ docker rm tfserve_deploy
 spin up a new container to serve your custom models
 $ docker run --name tfserve_deploy -p 9000:9000 -d -v /pathtolocal/models:/models:ro amiyapatanaik/tfserve
 ```
+
 ***Train and Save TF model using Keras***
 Sample code to train a MNIST model is included which is directly taken from Keras repo. You must have keras and tensorflow installed on your system. 
 ```sh
@@ -74,6 +76,7 @@ This model must be converted to tensorflow compatible format. Use the export_mod
 -n is name of the model, -p is path to the keras model and -v is version number
 $ python export_model.py -n mnist -p mnist.hdf5 -v 1
 ```
+
 ***Sample python client***
 Once the server is running, it is possible to query it using the gRPC protocol. A complex example comes from official tf git repo, included here for reference:
 ```sh
