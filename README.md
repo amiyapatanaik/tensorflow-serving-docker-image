@@ -16,7 +16,7 @@ $ docker pull amiyapatanaik/tfserve
 to check if the image loaded successfully:
 ```sh
 $ docker images
-REPOSITORY          				TAG                 IMAGE ID            CREATED             SIZE
+REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
 amiyapatanaik/tfserve             latest              06e872e14ef6        12 hours ago        5.43GB
 ```
 **Run an instance of the image (default settings)**: 
